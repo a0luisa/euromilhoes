@@ -1,0 +1,30 @@
+
+body{
+    text-align: center;
+    margin-top: 5%;
+    background-color: cadetblue;
+}
+div{
+    background-color: cornsilk;
+    width: 50%;
+    margin:auto;
+    border-radius: 3rem;
+    box-shadow: 0.25rem 0.25rem #2C2B2B;
+    
+}
+h1{
+    margin:2rem;
+    font-family: 'Hind', sans-serif;
+    font-size: 3rem;
+    color: #2C2B2B;
+}
+p{
+    padding: 1.5rem 0 1rem 0;
+    margin:0;
+}
+button{
+    margin:0 1rem 2rem 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem #2C2B2B;
+}
