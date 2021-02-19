@@ -1,5 +1,6 @@
 var n=[]
 var e=[]
+var num_of_keys=0
 function createKey(){
     
     c=1
@@ -34,11 +35,19 @@ function createKey(){
         e.push(b)
         d++
     }
+    num_of_keys+=1
+    if (num_of_keys>0){
+        document.getElementById("icon").classList.remove("h")
+        document.getElementById("icon-rights").classList.remove("h")
+    }
     
 
 }
 function clear(){
-    document.querySelector("div").innerHTML=""
+    document.getElementById("keys").innerHTML=""
+    num_of_keys=0
+    document.getElementById("icon").classList.add("h")
+    document.getElementById("icon-rights").classList.add("h")
 }
 
 
@@ -49,11 +58,31 @@ document.getElementById("botao").addEventListener("click", function(){
     e.sort(function(a, b){return a-b})
     var key=document.createElement("p")
     document.getElementById("keys").appendChild(key)
-    key.innerHTML=`<strong>Números:</strong> ${n} <br><strong> Estrelas:</strong>  ${e}`
+    key.innerHTML=`${num_of_keys}.<strong>Números:</strong> ${n} <br><strong> Estrelas:</strong>  ${e}`
     n=[]
     e=[]
+    
+    
 
 })
 document.getElementById("clear").addEventListener("click", function(){
     clear()
+    
 })
+document.getElementById("icon").addEventListener("click", function(){
+    
+    var area=document.createElement("textarea")
+    document.getElementById("keys").appendChild(area)
+    var text=document.getElementById("keys").innerText
+    area.innerHTML=text
+    area.select();
+    area.setSelectionRange(0, 99999); 
+
+    document.execCommand("copy");
+    area.remove()
+    alert("Chaves copiadas para a área de transferência")
+    
+
+
+})
+

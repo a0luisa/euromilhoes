@@ -31,3 +31,22 @@ button{
 button:hover{
     background-color: rgb(243, 200, 207);
 }
+.h{
+    visibility: hidden;
+
+}
+#icon{
+    padding: 0;
+    position: relative;
+    top: 0.5rem;
+}
+img:hover{
+    border-bottom: 1px dotted black;
+   
+}
+#text{
+    visibility: collapse;
+    width: 0;
+    height: 0;
+    padding: 0;
+}
